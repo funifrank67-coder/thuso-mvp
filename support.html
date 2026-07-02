@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="THUSO helps users connect with trusted GBV support services and emergency contacts.">
+
+<meta name="keywords" content="THUSO support, GBV support, Mthatha support services, emergency contacts">
+
+<meta name="author" content="Funanani Netshifhefhe">
+
+<meta name="theme-color" content="#121212">
+
+<title>THUSO | Find Support</title>
+
+<link rel="icon" href="images/thusoLogLight.jpg" type="image/x-icon">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Quick Exit -->
+
+<button class="quick-exit" onclick="quickExit()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Quick Exit
+
+</button>
+
+
+
+<!-- Overlay -->
+
+<div class="overlay" id="overlay"></div>
+
+
+
+
+<!-- Sidebar -->
+
+<nav class="sidebar" id="sidebar">
+
+
+<div class="sidebar-header">
+
+<img src="images/thusoLogLight.jpg" alt="THUSO Logo">
+
+<h2>THUSO</h2>
+
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+</li>
+
+
+<li>
+<a href="about.html">
+<i class="fa-solid fa-users"></i>
+Our Story
+</a>
+</li>
+
+
+<li>
+<a href="support.html">
+<i class="fa-solid fa-hand-holding-heart"></i>
+Find Support
+</a>
+</li>
+
+
+<li>
+<a href="index.html#faq">
+<i class="fa-solid fa-circle-question"></i>
+FAQ
+</a>
+</li>
+
+
+<li>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdorxG40xHmfavvr90T1yedFlYFtvC7zPvvxeqQZqKssrCTqw/viewform?usp=sharing&ouid=115446433279095511927">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+Report Now
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- Header -->
+
+<header class="header">
+
+
+<div class="logo">
+
+<img src="images/thusoLogLight.jpg" alt="THUSO Logo">
+
+<span>THUSO</span>
+
+</div>
+
+
+
+<button class="menu-btn" id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+</header>
+
+
+
+
+
+
+<!-- Hero -->
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<span class="badge">
+
+Find Support
+
+</span>
+
+
+
+<h1>
+
+You are not alone.
+
+</h1>
+
+
+
+<p>
+
+THUSO helps connect individuals with trusted support services when they need help, guidance, or immediate assistance.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Safety Notice -->
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+<h2>
+
+Your Safety <span>Comes First</span>
+
+</h2>
+
+
+
+<p class="section-intro">
+
+If you are in immediate danger or it is unsafe to make a call, please move to a safer location first before contacting any support service.
+
+</p>
+
+
+<p>
+
+Your safety is important. Only share information that you feel comfortable sharing.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Support Contacts -->
+
+
+<section class="section support-connect">
+
+
+<div class="container">
+
+
+<h2>
+
+Trusted <span>Support Contacts</span>
+
+</h2>
+
+
+
+<p>
+
+These organisations provide important support services. THUSO helps connect people with existing support systems.
+
+</p>
+
+
+
+<div class="support-buttons">
+
+
+
+
+
+<div class="support-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+
+<h3>
+
+SAPS Mthatha
+
+</h3>
+
+
+<p>
+
+Emergency assistance
+
+</p>
+
+
+<strong>
+
+047 501 1010
+
+</strong>
+
+
+
+<a href="tel:0475011010">
+
+Call Now
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="support-card">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+
+<h3>
+
+Sinawe Thuthuzela Care Centre
+
+</h3>
+
+
+<p>
+
+GBV support and assistance
+
+</p>
+
+
+<strong>
+
+047 531 6030
+
+</strong>
+
+
+
+<a href="tel:0475316030">
+
+Call Now
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="support-card">
+
+<i class="fa-solid fa-phone"></i>
+
+
+<h3>
+
+GBV Command Centre
+
+</h3>
+
+
+<p>
+
+National GBV support service
+
+</p>
+
+
+<strong>
+
+0800 428 428
+
+</strong>
+
+
+
+<a href="tel:0800428428">
+
+Call Now
+
+</a>
+
+
+
+<a href="https://gbv.org.za/" target="_blank">
+
+Visit Website
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="support-card">
+
+<i class="fa-solid fa-hospital"></i>
+
+
+<h3>
+
+Mthatha General Hospital
+
+</h3>
+
+
+<p>
+
+Healthcare assistance
+
+</p>
+
+
+<strong>
+
+047 502 4400
+
+</strong>
+
+
+
+<a href="tel:0475024400">
+
+Call Now
+
+</a>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- THUSO Role -->
+
+
+<section class="section why-thuso">
+
+
+<div class="container">
+
+
+<h2>
+
+How THUSO <span>Helps</span>
+
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-link"></i>
+
+
+<h3>
+
+Connection
+
+</h3>
+
+
+<p>
+
+THUSO helps users find the right support channels without feeling alone.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-lock"></i>
+
+
+<h3>
+
+Privacy
+
+</h3>
+
+
+<p>
+
+Users can choose what information they are comfortable sharing.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+
+<h3>
+
+Community
+
+</h3>
+
+
+<p>
+
+We believe stronger communities begin with easier access to support.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Report CTA -->
+
+
+<section class="cta">
+
+
+<div class="container">
+
+
+<h2>
+
+Need To Report?
+
+</h2>
+
+
+
+<p>
+
+If you want to report an incident, use the THUSO reporting platform.
+
+</p>
+
+
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdorxG40xHmfavvr90T1yedFlYFtvC7zPvvxeqQZqKssrCTqw/viewform?usp=sharing&ouid=115446433279095511927" class="btn primary">
+
+Report Now
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Footer -->
+
+
+<footer>
+
+
+<div class="footer-content">
+
+
+<div class="footer-logo">
+
+<img src="images/thusoLogLight.jpg" alt="THUSO Logo">
+
+<h3>
+
+THUSO
+
+</h3>
+
+</div>
+
+
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="support.html">Support</a>
+
+<a href="index.html#faq">FAQ</a>
+
+</div>
+
+
+
+<p>
+
+© 2026 THUSO. All Rights Reserved.
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+<!-- Floating Scroll Button -->
+<button id="scrollBtn" class="scroll-btn" aria-label="Scroll Page">
+    <i class="fa-solid fa-arrow-down"></i>
+</button>
+
+</body>
+
+</html>
