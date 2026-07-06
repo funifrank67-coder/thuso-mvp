@@ -35,7 +35,11 @@
     
     <!--This tells Google which URL is the main version.-->
     <link rel="canonical" href="https://thuso.org.za/">
-
+    
+<!-- connecting the webapp to our website-->
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#000000">
+    
 </head>
 
 
@@ -792,7 +796,6 @@ Frequently Asked <span>Questions</span>
 
 What is THUSO?
 
-
 <i class="fa-solid fa-chevron-down"></i>
 
 
@@ -856,12 +859,6 @@ Yes. THUSO provides an option for users to remain anonymous when submitting a re
 </div>
 
 
-
-
-
-
-
-
 <div class="faq-item">
 
 
@@ -875,9 +872,6 @@ Is THUSO replacing the police or support organisations?
 
 
 </button>
-
-
-
 
 <div class="faq-answer">
 
@@ -893,9 +887,6 @@ No. THUSO does not replace law enforcement, healthcare providers, or existing GB
 
 
 </div>
-
-
-
 
 
 
@@ -932,10 +923,6 @@ After submitting a report, the information is captured for follow-up and support
 
 
 </div>
-
-
-
-
 
 
 
@@ -1087,8 +1074,6 @@ Sinawe Thuthuzela Care Centre
 
 
 </a>
-
-
 
 
 
@@ -1285,11 +1270,22 @@ If it is unsafe to make a call, please move to a safe location first before cont
 
 
 <!-- Scripts -->
-
 <script src="script.js"></script>
 <!-- Floating Scroll Button -->
 <button id="scrollBtn" class="scroll-btn" aria-label="Scroll Page">
     <i class="fa-solid fa-arrow-down"></i>
 </button>
+    
+<!-- the app tools-->
+    <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js")
+        .then(() => console.log("THUSO Service Worker registered"))
+        .catch((err) => console.log("SW registration failed:", err));
+    });
+  }
+</script>
+    
 </body>
 </html>
