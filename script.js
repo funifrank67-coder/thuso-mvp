@@ -1,5 +1,4 @@
 // ======================================
-// THUSO MVP JavaScript
 // Developed by Funanani Netshifhefhe
 // ======================================
 
@@ -255,3 +254,68 @@ function quickExit(){
 
 
 }
+
+// ================================
+// upgrading actions n feel
+// ================================
+
+// 1. Safe Quick Exit Functionality
+function quickExit() {
+    // Replaces the tab instantly so clicking "Back" won't reveal this site
+    window.location.replace("https://www.google.com");
+}
+
+// 2. Mobile Sidebar System Controls
+const menuBtn = document.getElementById('menuBtn');
+const sidebar = document.getElementById('sidebar');
+const closeMenu = document.getElementById('closeMenu');
+const overlay = document.getElementById('overlay');
+
+if (menuBtn && sidebar && closeMenu && overlay) {
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    };
+
+    menuBtn.addEventListener('click', toggleSidebar);
+    closeMenu.addEventListener('click', toggleSidebar);
+    overlay.addEventListener('click', toggleSidebar);
+}
+
+// 3. Smooth FAQ Accordion Dropdowns
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        item.classList.toggle('active');
+        
+        if (item.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            answer.style.padding = "15px 0";
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            answer.style.maxHeight = "0";
+            answer.style.padding = "0";
+            icon.style.transform = "rotate(0deg)";
+        }
+    });
+});
+
+// 4. Scroll Reveal (Fade-in animations on scroll)
+const revealElements = document.querySelectorAll('.card, .safety-item, .step');
+
+const revealOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            observer.unobserve(entry.target); // Stops watching once it turns visible
+        }
+    });
+}, {
+    threshold: 0.15,
+    rootMargin: "0px 0px -40px 0px"
+});
+
+revealElements.forEach(el => revealOnScroll.observe(el));
