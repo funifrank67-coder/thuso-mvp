@@ -1942,3 +1942,108 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+/* ========================================================
+   THUSO BUG FIXES, ACCORDION FIX & PUMPING ANIMATIONS
+======================================================== */
+
+/* Fix for Scroll Reveal: If JavaScript fails to trigger, elements stay visible */
+.step, .safety-item, .card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: all 0.4s ease;
+}
+
+/* Let's still keep a gentle scroll interaction for browsers running JS smoothly */
+.reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* --- FAQ ACCORDION OVERRIDES --- */
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background: var(--surface);
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    border-color: rgba(230, 57, 70, 0.5);
+    background: var(--surface-light);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px; /* Reset padding to 0 when closed */
+    background: rgba(255, 255, 255, 0.01);
+    border-left: 3px solid var(--primary);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease, margin 0.35s ease;
+    margin-bottom: 0;
+}
+
+/* When the active item wrapper class is turned on by JavaScript */
+.faq-item.active .faq-answer {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-top: none;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: var(--primary);
+}
+
+
+/* --- CONTINUOUS PUMPING/PULSING ACTIONS --- */
+
+/* 1. Report Now Glowing Button Pulse */
+.btn.primary, .report-link {
+    animation: buttonPump 2.5s infinite ease-in-out;
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.6);
+}
+
+@keyframes buttonPump {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+    }
+    50% {
+        transform: scale(1.04); /* Softly pumps outwards */
+        box-shadow: 0 0 15px 6px rgba(230, 57, 70, 0); /* Outer edge fade ring */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+    }
+}
+
+/* 2. Quick Exit Flashing Edge Outline */
+.quick-exit {
+    animation: quickExitFlash 3s infinite ease-in-out;
+}
+
+@keyframes quickExitFlash {
+    0% {
+        box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4), 0 0 0 0 rgba(230, 57, 70, 0.5);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(230, 57, 70, 0.6), 0 0 0 10px rgba(230, 57, 70, 0);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4), 0 0 0 0 rgba(230, 57, 70, 0);
+    }
+}
