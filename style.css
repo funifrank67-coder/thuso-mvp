@@ -2047,3 +2047,36 @@ footer {
         box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4), 0 0 0 0 rgba(230, 57, 70, 0);
     }
 }
+/* ========================================================
+    FLASHING REPORT BUTTON
+======================================================== */
+
+/* 1. Target the button specifically and attach the animation */
+.hero-buttons .btn.primary,
+.sidebar .report-link,
+.cta .btn.primary {
+    position: relative;
+    animation: urgentPulse 2s infinite ease-in-out;
+    box-shadow: 0 0 0 0 rgba(223, 28, 28, 0.7); /* Starts with an intense red glow */
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+
+/* 2. Create the smooth expanding wave keyframe effect */
+@keyframes urgentPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(223, 28, 28, 0.8);
+    }
+    
+    50% {
+        transform: scale(1.04); /* Softly grows slightly larger to catch the eye */
+        box-shadow: 0 0 0 15px rgba(223, 28, 28, 0); /* Shoots out a glowing red wave */
+        background-color: #ff2b2b; /* Slightly brightens up the red background color */
+    }
+    
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(223, 28, 28, 0);
+    }
+}
